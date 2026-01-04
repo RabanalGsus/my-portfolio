@@ -11,7 +11,7 @@ export default function Nav() {
     <header className="sticky top-0 z-50 border-b border-zinc-800 bg-zinc-950/70 backdrop-blur">
       <div className="mx-auto flex max-w-3xl items-center justify-between px-6 py-4">
         <Link href="/" className="font-semibold tracking-tight">
-          Jesús Rabanal
+          Jesús Rabanal Álvarez
         </Link>
         <nav className="flex gap-4 text-sm text-zinc-300">
           {nav.map((item) => (
