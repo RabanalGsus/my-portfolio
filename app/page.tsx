@@ -16,7 +16,7 @@ export default function Home() {
     <main className="min-h-screen bg-zinc-950 text-zinc-100">
       <div className="mx-auto max-w-3xl px-6 py-16">
         <header className="mb-12">
-          <h1 className="text-4xl font-bold tracking-tight">Your Name</h1>
+          <h1 className="text-4xl font-bold tracking-tight">Jesús Rabanal Álvarez</h1>
           <p className="mt-3 text-zinc-400">
             NLP / Linguistics + Tech • Copenhagen • Open to roles
           </p>
@@ -56,7 +56,7 @@ export default function Home() {
         <section className="mb-12">
           <h2 className="text-xl font-semibold">About</h2>
           <p className="mt-3 text-zinc-400">
-            Short bio: what you study/work on, your focus areas, and what you’re looking for.
+            Short bio: Hello there! I am Jesús, a recently graduated computational linguist, who is interested in Data Analysis, Big Data management and network maintenance; hit me up if i fit any of your needs ;)
           </p>
         </section>
 
