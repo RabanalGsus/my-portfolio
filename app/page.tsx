@@ -1,12 +1,12 @@
 const projects = [
   {
     title: "Project One",
-    description: "One-liner about what it does and what you used.",
+    description: "WIP",
     href: "#",
   },
   {
     title: "Project Two",
-    description: "Another one-liner. Link to GitHub or a demo.",
+    description: "WIP",
     href: "#",
   },
 ];
