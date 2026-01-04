@@ -1,20 +1,23 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import Nav from "@/components/Nav";
 
 export const metadata: Metadata = {
-  title: "Jesús Rabanal Álvarez CV",
-  description: "Designed by me ;)",
+  title: "Jesús Rabanal",
+  description:
+    "NLP · Linguistics & Technology · Developer — projects, research interests, and CV.",
+  openGraph: {
+    title: "Jesús Rabanal",
+    description:
+      "NLP · Linguistics & Technology · Developer — projects, research interests, and CV.",
+    url: "https://jesusrabanal.vercel.app",
+    siteName: "Jesús Rabanal",
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
@@ -24,9 +27,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className="min-h-screen bg-zinc-950 text-zinc-100">
+        <Nav />
         {children}
       </body>
     </html>

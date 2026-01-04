@@ -1,34 +1,34 @@
-const projects = [
-  {
-    title: "Project One",
-    description: "WIP",
-    href: "#",
-  },
-  {
-    title: "Project Two",
-    description: "WIP",
-    href: "#",
-  },
-];
+import Section from "@/components/Section";
+import ProjectCard from "@/components/ProjectCard";
+import { projects } from "@/data/projects";
 
 export default function Home() {
+  const featured = projects.filter((p) => p.featured);
+
   return (
-    <main className="min-h-screen bg-zinc-950 text-zinc-100">
-      <div className="mx-auto max-w-3xl px-6 py-16">
-        <header className="mb-12">
-          <h1 className="text-4xl font-bold tracking-tight">Jesús Rabanal Álvarez</h1>
+    <main>
+      <div className="mx-auto max-w-3xl px-6 py-14">
+        <header>
+          <h1 className="text-4xl font-bold tracking-tight">Jesús Rabanal</h1>
           <p className="mt-3 text-zinc-400">
-            NLP / Linguistics + Tech • Copenhagen • Open to roles
+            NLP · Linguistics &amp; Technology · Developer
           </p>
 
-          <div className="mt-6 flex flex-wrap gap-3">
-            <a className="underline text-zinc-200" href="https://github.com/RabanalGsus">
+          <p className="mt-6 text-zinc-300 leading-relaxed">
+            I work at the intersection of linguistics, natural language
+            processing, and software development. My interests include neural
+            language models, compositional generalization, and practical ML
+            systems for language data.
+          </p>
+
+          <div className="mt-6 flex flex-wrap gap-3 text-sm">
+            <a className="underline text-zinc-200" href="https://github.com/YOUR_USERNAME">
               GitHub
             </a>
-            <a className="underline text-zinc-200" href="https://www.linkedin.com/in/jesus-rabanal-alvarez/">
+            <a className="underline text-zinc-200" href="https://www.linkedin.com/in/YOUR_PROFILE/">
               LinkedIn
             </a>
-            <a className="underline text-zinc-200" href="mailto:jesusrabanal@hotmail.com">
+            <a className="underline text-zinc-200" href="mailto:you@example.com">
               Email
             </a>
             <a className="underline text-zinc-200" href="/cv.pdf">
@@ -37,31 +37,42 @@ export default function Home() {
           </div>
         </header>
 
-        <section className="mb-12">
-          <h2 className="text-xl font-semibold">Projects</h2>
-          <div className="mt-4 grid gap-4">
-            {projects.map((p) => (
-              <a
+        <Section title="Currently">
+          <ul className="list-disc pl-5 space-y-2 text-zinc-400">
+            <li>MSc-level coursework in NLP, linear algebra, and probability</li>
+            <li>
+              Research-oriented projects involving Transformers and sequence
+              learning
+            </li>
+            <li>
+              Building and evaluating language models for low-resource and
+              structured tasks
+            </li>
+          </ul>
+        </Section>
+
+        <Section title="Selected work">
+          <div className="grid gap-4">
+            {featured.map((p) => (
+              <ProjectCard
                 key={p.title}
-                href={p.href}
-                className="rounded-xl border border-zinc-800 bg-zinc-900/40 p-5 hover:border-zinc-700"
-              >
-                <div className="font-medium">{p.title}</div>
-                <div className="mt-1 text-sm text-zinc-400">{p.description}</div>
-              </a>
+                title={p.title}
+                description={p.description}
+                tech={p.tech}
+                href={p.links?.find((l) => l.label === "GitHub")?.href}
+              />
             ))}
           </div>
-        </section>
 
-        <section className="mb-12">
-          <h2 className="text-xl font-semibold">About</h2>
-          <p className="mt-3 text-zinc-400">
-            Short bio: Hello there! I am Jesús, a recently graduated computational linguist, who is interested in Data Analysis, Big Data management and network maintenance; hit me up if i fit any of your needs ;)
-          </p>
-        </section>
+          <div className="mt-5 text-sm">
+            <a className="underline text-zinc-200" href="/projects">
+              View all projects →
+            </a>
+          </div>
+        </Section>
 
-        <footer className="text-sm text-zinc-500">
-          © {new Date().getFullYear()} Jesús Rabanal Álvarez
+        <footer className="mt-14 text-sm text-zinc-500">
+          © {new Date().getFullYear()} Jesús Rabanal
         </footer>
       </div>
     </main>
