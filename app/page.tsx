@@ -61,7 +61,7 @@ export default function Home() {
         </section>
 
         <footer className="text-sm text-zinc-500">
-          © {new Date().getFullYear()} Your Name
+          © {new Date().getFullYear()} Jesús Rabanal Álvarez
         </footer>
       </div>
     </main>
