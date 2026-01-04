@@ -1,31 +1,33 @@
 @import "tailwindcss";
 
-/* Design tokens (single source of truth) */
+/* Pastel light theme (default) */
 :root {
-  --bg: 9 9 11;         /* zinc-950 */
-  --panel: 18 18 23;    /* slightly lighter */
-  --border: 39 39 42;   /* zinc-800 */
-  --text: 244 244 245;  /* zinc-100 */
-  --muted: 161 161 170; /* zinc-400 */
-  --accent: 56 189 248; /* sky-400 */
+  --bg: 252 248 255;        /* lavender-tinted white */
+  --panel: 245 240 255;     /* soft lavender */
+  --border: 220 214 235;    /* muted border */
+  --text: 30 28 36;         /* soft near-black */
+  --muted: 92 88 104;       /* muted text */
+  --accent: 139 199 255;    /* pastel sky */
+  --accent2: 255 186 214;   /* pastel pink */
 }
 
-/* Base page */
+/* Dark theme (still pastel-ish, not harsh) */
+:root[data-theme="dark"] {
+  --bg: 16 16 24;           /* soft navy-black */
+  --panel: 26 26 38;        /* lifted surface */
+  --border: 58 58 78;       /* muted border */
+  --text: 242 240 248;      /* soft white */
+  --muted: 170 166 186;     /* muted text */
+  --accent: 160 210 255;    /* pastel sky */
+  --accent2: 255 198 222;   /* pastel pink */
+}
+
 html,
 body {
   background: rgb(var(--bg));
   color: rgb(var(--text));
 }
 
-/* Tailwind v4 theme bridge (optional but fine to keep) */
-@theme inline {
-  --color-background: rgb(var(--bg));
-  --color-foreground: rgb(var(--text));
-  --font-sans: var(--font-sans);
-  --font-mono: var(--font-mono);
-}
-
-/* Keep body simple—don’t override the theme */
 body {
   font-family: var(--font-sans, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif);
 }
