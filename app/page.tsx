@@ -9,26 +9,26 @@ export default function Home() {
     <main>
       <div className="mx-auto max-w-3xl px-6 py-14">
         <header>
-          <h1 className="text-4xl font-bold tracking-tight">Jesús Rabanal</h1>
+          <h1 className="text-4xl font-bold tracking-tight">Jesús Rabanal Álvarez</h1>
           <p className="mt-3 text-zinc-400">
-            NLP · Linguistics &amp; Technology · Developer
+            NLP · Linguistics &amp; Attention · Researcher
           </p>
 
           <p className="mt-6 text-zinc-300 leading-relaxed">
             I work at the intersection of linguistics, natural language
             processing, and software development. My interests include neural
-            language models, compositional generalization, and practical ML
+            language models, natural cognitive processes, and practical ML
             systems for language data.
           </p>
 
           <div className="mt-6 flex flex-wrap gap-3 text-sm">
-            <a className="underline text-zinc-200" href="https://github.com/YOUR_USERNAME">
+            <a className="underline text-zinc-200" href="https://github.com/RabanalGsus">
               GitHub
             </a>
-            <a className="underline text-zinc-200" href="https://www.linkedin.com/in/YOUR_PROFILE/">
+            <a className="underline text-zinc-200" href="https://www.linkedin.com/in/jesus-rabanal-alvarez/">
               LinkedIn
             </a>
-            <a className="underline text-zinc-200" href="mailto:you@example.com">
+            <a className="underline text-zinc-200" href="mailto:jesusrabanal@hotmail.com">
               Email
             </a>
             <a className="underline text-zinc-200" href="/cv.pdf">
@@ -39,14 +39,14 @@ export default function Home() {
 
         <Section title="Currently">
           <ul className="list-disc pl-5 space-y-2 text-zinc-400">
-            <li>MSc-level coursework in NLP, linear algebra, and probability</li>
+            <li>MSc-level coursework in NLP, ML and Cognitive Science</li>
             <li>
-              Research-oriented projects involving Transformers and sequence
-              learning
+              Research-oriented projects involving Linguistics, 
+              Cognitive Science, and Computational Modeling.
             </li>
             <li>
               Building and evaluating language models for low-resource and
-              structured tasks
+              structured tasks.
             </li>
           </ul>
         </Section>
@@ -72,7 +72,7 @@ export default function Home() {
         </Section>
 
         <footer className="mt-14 text-sm text-zinc-500">
-          © {new Date().getFullYear()} Jesús Rabanal
+          © {new Date().getFullYear()} Jesús Rabanal Álvarez
         </footer>
       </div>
     </main>

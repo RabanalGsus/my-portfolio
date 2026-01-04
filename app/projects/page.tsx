@@ -34,7 +34,7 @@ export default function ProjectsPage() {
                 <p className="text-zinc-400">{p.approach}</p>
               </Section>
 
-              <Section title="Tech">
+              <Section title="Methods">
                 <div className="flex flex-wrap gap-2">
                   {p.tech.map((t) => (
                     <Tag key={t}>{t}</Tag>
