@@ -22,13 +22,13 @@ export default function Home() {
           </p>
 
           <div className="mt-6 flex flex-wrap gap-3">
-            <a className="underline text-zinc-200" href="https://github.com/YOURNAME">
+            <a className="underline text-zinc-200" href="https://github.com/RabanalGsus">
               GitHub
             </a>
-            <a className="underline text-zinc-200" href="https://www.linkedin.com/in/YOURNAME/">
+            <a className="underline text-zinc-200" href="https://www.linkedin.com/in/jesus-rabanal-alvarez/">
               LinkedIn
             </a>
-            <a className="underline text-zinc-200" href="mailto:you@example.com">
+            <a className="underline text-zinc-200" href="mailto:jesusrabanal@hotmail.com">
               Email
             </a>
             <a className="underline text-zinc-200" href="/cv.pdf">
