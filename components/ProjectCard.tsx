@@ -12,7 +12,7 @@ export default function ProjectCard({
   href?: string;
 }) {
   const Card = (
-    <article className="group rounded-2xl border border-[rgb(var(--border))] bg-[rgb(var(--panel))] p-6 transition hover:border-[rgb(var(--accent))]">
+    <article className="group rounded-3xl border border-[rgb(var(--border))] bg-[rgb(var(--panel))] p-7 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md hover:border-[rgb(var(--accent))]">
       <div className="flex items-start justify-between gap-4">
         <h3 className="text-base font-semibold leading-snug text-[rgb(var(--text))]">
           {title}

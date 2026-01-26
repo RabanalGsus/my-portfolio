@@ -1,25 +1,23 @@
 @import "tailwindcss";
 
-/* Pastel light theme (default) */
 :root {
-  --bg: 252 248 255;        /* lavender-tinted white */
-  --panel: 245 240 255;     /* soft lavender */
-  --border: 220 214 235;    /* muted border */
-  --text: 30 28 36;         /* soft near-black */
-  --muted: 92 88 104;       /* muted text */
-  --accent: 139 199 255;    /* pastel sky */
-  --accent2: 255 186 214;   /* pastel pink */
+  --bg: 237 232 208;
+  --panel: 224	237	187;
+  --border: 214 208 198;
+  --text: 28 26 22;
+  --muted: 88 84 76;
+  --accent: 140 190 255;
+  --accent2: 242 180 200;
 }
 
-/* Dark theme (still pastel-ish, not harsh) */
 :root[data-theme="dark"] {
-  --bg: 16 16 24;           /* soft navy-black */
-  --panel: 26 26 38;        /* lifted surface */
-  --border: 58 58 78;       /* muted border */
-  --text: 242 240 248;      /* soft white */
-  --muted: 170 166 186;     /* muted text */
-  --accent: 160 210 255;    /* pastel sky */
-  --accent2: 255 198 222;   /* pastel pink */
+  --bg: 18 18 20;
+  --panel: 28 28 32;
+  --border: 64 64 70;
+  --text: 240 238 234;
+  --muted: 175 170 160;
+  --accent: 160 210 255;
+  --accent2: 255 195 215;
 }
 
 html,
@@ -29,5 +27,5 @@ body {
 }
 
 body {
-  font-family: var(--font-sans, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif);
+  font-family: var(--font-sans, system-ui, sans-serif);
 }

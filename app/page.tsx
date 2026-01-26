@@ -9,45 +9,47 @@ export default function Home() {
     <main>
       <div className="mx-auto max-w-3xl px-6 py-14">
         <header>
-          <h1 className="text-4xl font-bold tracking-tight text-[rgb(var(--text))]">
-            Jesús Rabanal Álvarez
-          </h1>
+          <div className="rounded-3xl border border-[rgb(var(--border))] bg-[rgb(var(--panel))] p-10 shadow-sm">
+            <h1 className="text-4xl font-bold tracking-tight text-[rgb(var(--text))]">
+              Jesús Rabanal Álvarez
+            </h1>
 
-          <p className="mt-3 text-[rgb(var(--muted))]">
-            NLP · Linguistics &amp; Attention · Researcher
-          </p>
+            <p className="mt-3 text-[rgb(var(--muted))]">
+              NLP · Linguistics &amp; Attention · Researcher
+            </p>
 
-          <p className="mt-6 leading-relaxed text-[rgb(var(--muted))]">
-            I work at the intersection of linguistics, natural language processing,
-            and software development. My interests include neural language models,
-            natural cognitive processes, and practical ML systems for language data.
-          </p>
-
-          <div className="mt-6 flex flex-wrap gap-3 text-sm">
-            <a
-              className="underline decoration-[rgb(var(--accent))] underline-offset-4 text-[rgb(var(--text))] hover:text-[rgb(var(--accent))] transition-colors"
-              href="https://github.com/RabanalGsus"
-            >
-              GitHub
-            </a>
-            <a
-              className="underline decoration-[rgb(var(--accent))] underline-offset-4 text-[rgb(var(--text))] hover:text-[rgb(var(--accent))] transition-colors"
-              href="https://www.linkedin.com/in/jesus-rabanal-alvarez/"
-            >
-              LinkedIn
-            </a>
-            <a
-              className="underline decoration-[rgb(var(--accent))] underline-offset-4 text-[rgb(var(--text))] hover:text-[rgb(var(--accent))] transition-colors"
-              href="mailto:jesusrabanal@hotmail.com"
-            >
-              Email
-            </a>
-            <a
-              className="underline decoration-[rgb(var(--accent))] underline-offset-4 text-[rgb(var(--text))] hover:text-[rgb(var(--accent))] transition-colors"
-              href="/cv.pdf"
-            >
-              CV (PDF)
-            </a>
+            <p className="mt-6 leading-relaxed text-[rgb(var(--muted))]">
+              I work at the intersection of linguistics, natural language processing,
+              and software development. My interests include neural language models,
+              natural cognitive processes, and practical ML systems for language data.
+            </p>
+          
+            <div className="mt-6 flex flex-wrap gap-3 text-sm">
+              <a
+                className="underline decoration-[rgb(var(--accent))] underline-offset-4 text-[rgb(var(--text))] hover:text-[rgb(var(--accent))] transition-colors"
+                href="https://github.com/RabanalGsus"
+              >
+                GitHub
+              </a>
+              <a
+                className="underline decoration-[rgb(var(--accent))] underline-offset-4 text-[rgb(var(--text))] hover:text-[rgb(var(--accent))] transition-colors"
+                href="https://www.linkedin.com/in/jesus-rabanal-alvarez/"
+              >
+                LinkedIn
+              </a>
+              <a
+                className="underline decoration-[rgb(var(--accent))] underline-offset-4 text-[rgb(var(--text))] hover:text-[rgb(var(--accent))] transition-colors"
+                href="mailto:jesusrabanal@hotmail.com"
+              >
+                Email
+              </a>
+              <a
+                className="underline decoration-[rgb(var(--accent))] underline-offset-4 text-[rgb(var(--text))] hover:text-[rgb(var(--accent))] transition-colors"
+                href="/cv.pdf"
+              >
+                CV (PDF)
+              </a>
+            </div>
           </div>
         </header>
 

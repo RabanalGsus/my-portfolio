@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { Sun, Moon } from "lucide-react";
 
 const nav = [
   { href: "/", label: "Home" },
@@ -12,25 +13,33 @@ const nav = [
 
 type ThemeMode = "auto" | "light" | "dark";
 
+function getThemeMode(): ThemeMode {
+  return ((window as any).__themeMode as ThemeMode | undefined) ?? "auto";
+}
+
+function setThemeMode(mode: ThemeMode) {
+  (window as any).__setThemeMode?.(mode);
+}
+
 export default function Nav() {
   const [mode, setMode] = useState<ThemeMode>("auto");
 
   useEffect(() => {
-    // read the mode that ThemeProvider exposes (fallback to auto)
-    const m = ((window as any).__themeMode as ThemeMode | undefined) ?? "auto";
-    setMode(m);
+    setMode(getThemeMode());
   }, []);
 
   function cycleTheme() {
-    const current = ((window as any).__themeMode as ThemeMode | undefined) ?? "auto";
-    const next: ThemeMode = current === "auto" ? "light" : current === "light" ? "dark" : "auto";
-    (window as any).__setThemeMode?.(next);
+    const current = getThemeMode();
+    const next: ThemeMode =
+      current === "light" ? "dark" : current === "dark" ? "auto" : "light";
+
+    setThemeMode(next);
     setMode(next);
   }
 
   return (
     <header className="sticky top-0 z-50 border-b border-[rgb(var(--border))] bg-[rgb(var(--bg))]/80 backdrop-blur">
-      <div className="mx-auto flex max-w-3xl items-center justify-between px-6 py-4">
+      <div className="mx-auto flex max-w-3xl items-center justify-between px-220 py-4">
         <div className="flex items-center gap-5">
           <nav className="flex gap-4 text-sm text-[rgb(var(--muted))]">
             {nav.map((item) => (
@@ -45,12 +54,19 @@ export default function Nav() {
           </nav>
 
           <button
-            className="rounded-full border border-[rgb(var(--border))] bg-[rgb(var(--panel))] px-3 py-1 text-xs text-[rgb(var(--muted))] hover:text-[rgb(var(--text))] hover:border-[rgb(var(--accent))] transition"
             onClick={cycleTheme}
             type="button"
-            title="Theme: auto/light/dark"
+            aria-label="Toggle theme (light, dark, auto)"
+            title="Toggle theme (light → dark → auto)"
+            className="flex h-9 w-9 items-center justify-center rounded-full border border-[rgb(var(--border))] bg-[rgb(var(--panel))]/70 text-[rgb(var(--text))] transition hover:border-[rgb(var(--accent))] hover:-translate-y-0.5"
           >
-            Theme: {mode}
+            {mode === "light" && <Sun size={18} />}
+            {mode === "dark" && <Moon size={18} />}
+            {mode === "auto" && (
+              <span className="text-[8px] font-semibold tracking-widest">
+                AUTO
+              </span>
+            )}
           </button>
         </div>
       </div>

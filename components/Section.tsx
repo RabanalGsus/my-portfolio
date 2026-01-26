@@ -8,9 +8,14 @@ export default function Section({
   children: ReactNode;
 }) {
   return (
-    <section className="mt-12">
-      <h2 className="text-xl font-semibold">{title}</h2>
-      <div className="mt-4 text-zinc-300">{children}</div>
+    <section className="mt-14">
+      <div className="flex items-baseline justify-between gap-6">
+        <h2 className="text-sm font-semibold tracking-[0.12em] uppercase text-[rgb(var(--muted))]">
+          {title}
+        </h2>
+        <div className="h-px flex-1 bg-[rgb(var(--border))]" />
+      </div>
+      <div className="mt-6">{children}</div>
     </section>
   );
 }
