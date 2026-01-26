@@ -59,4 +59,18 @@ export const projects: Project[] = [
     year: "2024",
     featured: false,
   },
+  {
+    title: "Topic Classification Based on Parliamentary Speeches from \"el Congreso de los Diputados\"",
+    description:
+      "Topic Classification Model trained on raw text from parliamentary speeches in Spanish.",
+    problem:
+      "Model topics from Parliamentary Speeches from Congress.",
+    approach:
+      "Analyzed the substantiality of the text with a simple logistic regression model initially, achieving high accuracy and precision in F1 tests; ascertaining the semantical validity of the data, then tried to model the topics, after careful consideration and a lot of testing ended up with BerTopic and a simple siamese neural network. ",
+    tech: ["Python", "BertTopic", "Siamese Networks", "FineTunning", "Topic Classification"],
+    outcome:
+      "Obtained a proficiently performing model able to produce semantically meaningful topics.",
+    year: "2026",
+    featured: false,
+  },
 ];
