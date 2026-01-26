@@ -1,13 +1,14 @@
 import Section from "@/components/Section";
 import ProjectCard from "@/components/ProjectCard";
 import { projects } from "@/data/projects";
+import Container from "@/components/Container";
 
 export default function Home() {
   const featured = projects.filter((p) => p.featured);
 
   return (
     <main>
-      <div className="mx-auto max-w-3xl px-6 py-14">
+      <Container>
         <header>
           <div className="rounded-3xl border border-[rgb(var(--border))] bg-[rgb(var(--panel))] p-10 shadow-sm">
             <h1 className="text-4xl font-bold tracking-tight text-[rgb(var(--text))]">
@@ -93,7 +94,7 @@ export default function Home() {
         <footer className="mt-14 text-sm text-[rgb(var(--muted))]">
           © {new Date().getFullYear()} Jesús Rabanal Álvarez
         </footer>
-      </div>
+      </Container>
     </main>
   );
 }

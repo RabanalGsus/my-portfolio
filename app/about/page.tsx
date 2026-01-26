@@ -1,5 +1,6 @@
 import Section from "@/components/Section";
 import Tag from "@/components/Tag";
+import Container from "@/components/Container";
 
 export default function AboutPage() {
   const groups: { title: string; items: string[] }[] = [
@@ -19,7 +20,7 @@ export default function AboutPage() {
 
   return (
     <main>
-      <div className="mx-auto max-w-3xl px-6 py-14">
+      <Container>
         <header>
           <h1 className="text-3xl font-bold tracking-tight">About</h1>
           <p className="mt-3 text-zinc-400">
@@ -62,7 +63,7 @@ export default function AboutPage() {
             environments.
           </p>
         </Section>
-      </div>
+      </Container>
     </main>
   );
 }

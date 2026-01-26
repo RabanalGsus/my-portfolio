@@ -1,11 +1,12 @@
 import Section from "@/components/Section";
 import Tag from "@/components/Tag";
 import { projects } from "@/data/projects";
+import Container from "@/components/Container";
 
 export default function ProjectsPage() {
   return (
     <main>
-      <div className="mx-auto max-w-3xl px-6 py-14">
+      <Container>X
         <header>
           <h1 className="text-3xl font-bold tracking-tight text-[rgb(var(--text))]">
             Projects
@@ -68,7 +69,7 @@ export default function ProjectsPage() {
             </article>
           ))}
         </div>
-      </div>
+      </Container>
     </main>
   );
 }

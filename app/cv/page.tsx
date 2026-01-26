@@ -1,9 +1,10 @@
 import Section from "@/components/Section";
-
+import Container from "@/components/Container";
 export default function CVPage() {
   return (
     <main>
-      <div className="mx-auto max-w-3xl px-6 py-14">
+
+      <Container>
         <header>
           <h1 className="text-3xl font-bold tracking-tight">CV</h1>
           <p className="mt-3 text-zinc-400">
@@ -26,7 +27,7 @@ export default function CVPage() {
             <li>Python, PyTorch, Linux, Git</li>
           </ul>
         </Section>
-      </div>
+      </Container>
     </main>
   );
 }
