@@ -12,7 +12,7 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    title: "Fine-tuning T5 on SCAN",
+    title: "Fine-tuning T5 on SCAN gay",
     description:
       "Studied compositional generalization by fine-tuning T5-small on SCAN tasks with custom evaluation.",
     problem:
