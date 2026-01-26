@@ -9,44 +9,58 @@ export default function Home() {
     <main>
       <div className="mx-auto max-w-3xl px-6 py-14">
         <header>
-          <h1 className="text-4xl font-bold tracking-tight">Jesús Rabanal Álvarez</h1>
-          <p className="mt-3 text-zinc-400">
+          <h1 className="text-4xl font-bold tracking-tight text-[rgb(var(--text))]">
+            Jesús Rabanal Álvarez
+          </h1>
+
+          <p className="mt-3 text-[rgb(var(--muted))]">
             NLP · Linguistics &amp; Attention · Researcher
           </p>
 
-          <p className="mt-6 text-zinc-300 leading-relaxed">
-            I work at the intersection of linguistics, natural language
-            processing, and software development. My interests include neural
-            language models, natural cognitive processes, and practical ML
-            systems for language data.
+          <p className="mt-6 leading-relaxed text-[rgb(var(--muted))]">
+            I work at the intersection of linguistics, natural language processing,
+            and software development. My interests include neural language models,
+            natural cognitive processes, and practical ML systems for language data.
           </p>
 
           <div className="mt-6 flex flex-wrap gap-3 text-sm">
-            <a className="underline text-zinc-200" href="https://github.com/RabanalGsus">
+            <a
+              className="underline decoration-[rgb(var(--accent))] underline-offset-4 text-[rgb(var(--text))] hover:text-[rgb(var(--accent))] transition-colors"
+              href="https://github.com/RabanalGsus"
+            >
               GitHub
             </a>
-            <a className="underline text-zinc-200" href="https://www.linkedin.com/in/jesus-rabanal-alvarez/">
+            <a
+              className="underline decoration-[rgb(var(--accent))] underline-offset-4 text-[rgb(var(--text))] hover:text-[rgb(var(--accent))] transition-colors"
+              href="https://www.linkedin.com/in/jesus-rabanal-alvarez/"
+            >
               LinkedIn
             </a>
-            <a className="underline text-zinc-200" href="mailto:jesusrabanal@hotmail.com">
+            <a
+              className="underline decoration-[rgb(var(--accent))] underline-offset-4 text-[rgb(var(--text))] hover:text-[rgb(var(--accent))] transition-colors"
+              href="mailto:jesusrabanal@hotmail.com"
+            >
               Email
             </a>
-            <a className="underline text-zinc-200" href="/cv.pdf">
+            <a
+              className="underline decoration-[rgb(var(--accent))] underline-offset-4 text-[rgb(var(--text))] hover:text-[rgb(var(--accent))] transition-colors"
+              href="/cv.pdf"
+            >
               CV (PDF)
             </a>
           </div>
         </header>
 
         <Section title="Currently">
-          <ul className="list-disc pl-5 space-y-2 text-zinc-400">
+          <ul className="list-disc pl-5 space-y-2 text-[rgb(var(--muted))]">
             <li>MSc-level coursework in NLP, ML and Cognitive Science</li>
             <li>
-              Research-oriented projects involving Linguistics, 
-              Cognitive Science, and Computational Modeling.
+              Research-oriented projects involving Linguistics, Cognitive Science, and
+              Computational Modeling.
             </li>
             <li>
-              Building and evaluating language models for low-resource and
-              structured tasks.
+              Building and evaluating language models for low-resource and structured
+              tasks.
             </li>
           </ul>
         </Section>
@@ -65,13 +79,16 @@ export default function Home() {
           </div>
 
           <div className="mt-5 text-sm">
-            <a className="underline text-zinc-200" href="/projects">
+            <a
+              className="underline decoration-[rgb(var(--accent))] underline-offset-4 text-[rgb(var(--text))] hover:text-[rgb(var(--accent))] transition-colors"
+              href="/projects"
+            >
               View all projects →
             </a>
           </div>
         </Section>
 
-        <footer className="mt-14 text-sm text-zinc-500">
+        <footer className="mt-14 text-sm text-[rgb(var(--muted))]">
           © {new Date().getFullYear()} Jesús Rabanal Álvarez
         </footer>
       </div>
