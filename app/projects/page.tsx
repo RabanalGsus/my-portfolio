@@ -7,8 +7,10 @@ export default function ProjectsPage() {
     <main>
       <div className="mx-auto max-w-3xl px-6 py-14">
         <header>
-          <h1 className="text-3xl font-bold tracking-tight">Projects</h1>
-          <p className="mt-3 text-zinc-400">
+          <h1 className="text-3xl font-bold tracking-tight text-[rgb(var(--text))]">
+            Projects
+          </h1>
+          <p className="mt-3 text-[rgb(var(--muted))]">
             A selection of research-oriented and applied work.
           </p>
         </header>
@@ -17,21 +19,25 @@ export default function ProjectsPage() {
           {projects.map((p) => (
             <article
               key={p.title}
-              className="rounded-2xl border border-zinc-800 bg-zinc-900/20 p-6"
+              className="rounded-2xl border border-[rgb(var(--border))] bg-[rgb(var(--panel))] p-6"
             >
               <div className="flex flex-wrap items-baseline justify-between gap-2">
-                <h2 className="text-lg font-semibold">{p.title}</h2>
-                {p.year ? <div className="text-sm text-zinc-500">{p.year}</div> : null}
+                <h2 className="text-lg font-semibold text-[rgb(var(--text))]">
+                  {p.title}
+                </h2>
+                {p.year ? (
+                  <div className="text-sm text-[rgb(var(--muted))]">{p.year}</div>
+                ) : null}
               </div>
 
-              <p className="mt-2 text-zinc-400">{p.description}</p>
+              <p className="mt-2 text-[rgb(var(--muted))]">{p.description}</p>
 
               <Section title="Problem">
-                <p className="text-zinc-400">{p.problem}</p>
+                <p className="text-[rgb(var(--muted))]">{p.problem}</p>
               </Section>
 
               <Section title="Approach">
-                <p className="text-zinc-400">{p.approach}</p>
+                <p className="text-[rgb(var(--muted))]">{p.approach}</p>
               </Section>
 
               <Section title="Methods">
@@ -43,13 +49,17 @@ export default function ProjectsPage() {
               </Section>
 
               <Section title="Outcome">
-                <p className="text-zinc-400">{p.outcome}</p>
+                <p className="text-[rgb(var(--muted))]">{p.outcome}</p>
               </Section>
 
               {p.links?.length ? (
                 <div className="mt-6 flex flex-wrap gap-4 text-sm">
                   {p.links.map((l) => (
-                    <a key={l.href} className="underline text-zinc-200" href={l.href}>
+                    <a
+                      key={l.href}
+                      href={l.href}
+                      className="underline decoration-[rgb(var(--accent))] underline-offset-4 text-[rgb(var(--text))] hover:text-[rgb(var(--accent))] transition-colors"
+                    >
                       {l.label}
                     </a>
                   ))}
