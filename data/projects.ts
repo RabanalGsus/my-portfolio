@@ -37,7 +37,7 @@ export const projects: Project[] = [
     outcome:
       "Reached very low training loss and observed expected generalization gaps on held-out compositions.",
     links: [
-      { label: "GitHub", href: "https://github.com/YOUR_USERNAME/YOUR_REPO" },
+      { label: "GitHub", href: "https://github.com/hjv300/final_project" },
     ],
     year: "2025",
     featured: true,
@@ -54,7 +54,7 @@ export const projects: Project[] = [
     outcome:
       "Successfully detected stylistic transitions across documents of varying difficulty levels.",
     links: [
-      { label: "GitHub", href: "https://github.com/YOUR_USERNAME/YOUR_REPO" },
+      { label: "GitHub", href: "https://github.com/hjv300/bertformultiauthorstylemodel-reexamlp2" },
     ],
     year: "2025",
     featured: true,
