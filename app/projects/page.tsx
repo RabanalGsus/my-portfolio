@@ -6,7 +6,7 @@ import Container from "@/components/Container";
 export default function ProjectsPage() {
   return (
     <main>
-      <Container>X
+      <Container>
         <header>
           <h1 className="text-3xl font-bold tracking-tight text-[rgb(var(--text))]">
             Projects
