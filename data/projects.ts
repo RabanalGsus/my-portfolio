@@ -73,5 +73,46 @@ export const projects: Project[] = [
     year: "2024",
     featured: false,
   },
-
+  {
+    title: "Bachelor Thesis: Anaphora resolution and reanalysis during L2 processing: A replication study using the visual world paradigm.",
+    description:
+      "Investigated how Spanish learners of English resolve ambiguous pronoun reference and attachment structures in sentence processing.",
+    problem:
+      "Explore how second-language speakers interpret structurally ambiguous sentences involving pronouns and multiple possible antecedents.",
+    approach:
+      "Designed a linguistically motivated study grounded in psycholinguistic research on anaphora resolution, attachment ambiguity, and cross-linguistic sentence processing.",
+    tech: [
+      "Linguistics",
+      "Psycholinguistics",
+      "Anaphora Resolution",
+      "Second Language Acquisition",
+      "Sentence Processing",
+      "Eye-tracking",
+    ],
+    outcome:
+      "Produced a research thesis connecting syntactic ambiguity, cross-linguistic influence, and L2 interpretation strategies. Awarded a mention of excellence in linguistics.",
+    year: "2023",
+    featured: false,
+  },
+  {
+    title: "Master Thesis: Ambiguous attachment through the Visual World Paradigm: An experimental study of Danish learners of Spanish",
+    description:
+      "Studied Spanish, Danish, and Danish L2 Spanish anaphora resolution preferences using a visual-world eye-tracking paradigm.",
+    problem:
+      "Investigate how speakers resolve ambiguous pronouns when two possible antecedents are available, and whether L2 learners converge on the target language or show L1 influence.",
+    approach:
+      "Designed and implemented a visual-world eye-tracking experiment with auditory stimuli, controlled visual scenes, manually defined regions of interest, and fixation-based analysis.",
+    tech: [
+      "Eye-tracking",
+      "Visual World Paradigm",
+      "Psycholinguistics",
+      "Experimental Design",
+      "Data Analysis",
+      "Anaphora Resolution",
+    ],
+    outcome:
+      "Produced a cross-linguistic experimental study combining psycholinguistic theory, eye-tracking methodology, and fixation-based analysis of sentence interpretation.",
+    year: "2026",
+    featured: true,
+  },
 ];
