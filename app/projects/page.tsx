@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import Container from "@/components/Container";
 import ProjectBrowser from "@/components/ProjectBrowser";
 import { projects } from "@/data/projects";
@@ -23,7 +24,15 @@ export default function ProjectsPage() {
         </header>
 
         <div className="mt-10">
-          <ProjectBrowser projects={projects} />
+          <Suspense
+            fallback={
+              <div className="rounded-2xl border border-[rgb(var(--border))] bg-[rgb(var(--panel))]/70 p-6 text-[rgb(var(--muted))]">
+                Loading projects...
+              </div>
+            }
+          >
+            <ProjectBrowser projects={projects} />
+          </Suspense>
         </div>
       </Container>
     </main>

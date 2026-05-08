@@ -18,10 +18,6 @@ export default function ProjectBrowser({ projects }: { projects: Project[] }) {
       setActiveCategory(categoryFromUrl);
     }
   }, [searchParams]);
-  
-export default function ProjectBrowser({ projects }: { projects: Project[] }) {
-  const [activeCategory, setActiveCategory] = useState("All");
-  const [openProject, setOpenProject] = useState<string | null>(null);
 
   const categories = useMemo(() => {
     const unique = new Set<string>();
@@ -41,6 +37,11 @@ export default function ProjectBrowser({ projects }: { projects: Project[] }) {
     );
   }, [projects, activeCategory]);
 
+  function handleCategoryClick(category: string) {
+    setActiveCategory(category);
+    setOpenProject(null);
+  }
+
   return (
     <div>
       <div className="mb-8 flex flex-wrap gap-2">
@@ -51,8 +52,8 @@ export default function ProjectBrowser({ projects }: { projects: Project[] }) {
             <button
               key={category}
               type="button"
-              onClick={() => setActiveCategory(category)}
-              className={`rounded-full border px-3 py-1 text-sm transition ${
+              onClick={() => handleCategoryClick(category)}
+              className={`rounded-full border px-3 py-1 text-sm shadow-sm transition hover:-translate-y-0.5 ${
                 isActive
                   ? "border-[rgb(var(--accent))] bg-[rgb(var(--accent))]/15 text-[rgb(var(--text))]"
                   : "border-[rgb(var(--border))] bg-[rgb(var(--panel))]/70 text-[rgb(var(--muted))] hover:border-[rgb(var(--accent))] hover:text-[rgb(var(--text))]"
@@ -64,92 +65,96 @@ export default function ProjectBrowser({ projects }: { projects: Project[] }) {
         })}
       </div>
 
-      <div className="space-y-5">
-        {filteredProjects.map((project) => {
-          const isOpen = openProject === project.title;
+      {filteredProjects.length === 0 ? (
+        <div className="rounded-2xl border border-[rgb(var(--border))] bg-[rgb(var(--panel))]/70 p-6 text-[rgb(var(--muted))]">
+          No projects found for this category.
+        </div>
+      ) : (
+        <div className="space-y-5">
+          {filteredProjects.map((project) => {
+            const isOpen = openProject === project.title;
 
-          return (
-            <article
-              key={project.title}
-              className="rounded-2xl border border-[rgb(var(--border))] bg-[rgb(var(--panel))]/80 p-6 shadow-sm transition hover:border-[rgb(var(--accent))]"
-            >
-              <button
-                type="button"
-                onClick={() =>
-                  setOpenProject(isOpen ? null : project.title)
-                }
-                className="w-full text-left"
+            return (
+              <article
+                key={project.title}
+                className="rounded-2xl border border-[rgb(var(--border))] bg-[rgb(var(--panel))]/80 p-6 shadow-sm transition hover:border-[rgb(var(--accent))]"
               >
-                <div className="flex flex-wrap items-baseline justify-between gap-2">
-                  <h2 className="text-lg font-semibold text-[rgb(var(--text))]">
-                    {project.title}
-                  </h2>
+                <button
+                  type="button"
+                  onClick={() => setOpenProject(isOpen ? null : project.title)}
+                  className="w-full text-left"
+                >
+                  <div className="flex flex-wrap items-baseline justify-between gap-2">
+                    <h2 className="text-lg font-semibold text-[rgb(var(--text))]">
+                      {project.title}
+                    </h2>
 
-                  <div className="flex items-center gap-3">
-                    {project.year ? (
+                    <div className="flex items-center gap-3">
+                      {project.year ? (
+                        <span className="text-sm text-[rgb(var(--muted))]">
+                          {project.year}
+                        </span>
+                      ) : null}
+
                       <span className="text-sm text-[rgb(var(--muted))]">
-                        {project.year}
+                        {isOpen ? "−" : "+"}
                       </span>
-                    ) : null}
-
-                    <span className="text-sm text-[rgb(var(--muted))]">
-                      {isOpen ? "−" : "+"}
-                    </span>
-                  </div>
-                </div>
-
-                <p className="mt-2 text-sm leading-relaxed text-[rgb(var(--muted))]">
-                  {project.description}
-                </p>
-
-                <div className="mt-4 flex flex-wrap gap-2">
-                  {project.tech.slice(0, 6).map((tech) => (
-                    <Tag key={tech}>{tech}</Tag>
-                  ))}
-                </div>
-              </button>
-
-              {isOpen ? (
-                <div className="mt-6 border-t border-[rgb(var(--border))] pt-6">
-                  <Section title="Problem">
-                    <p className="text-[rgb(var(--muted))]">
-                      {project.problem}
-                    </p>
-                  </Section>
-
-                  <Section title="Approach">
-                    <p className="text-[rgb(var(--muted))]">
-                      {project.approach}
-                    </p>
-                  </Section>
-
-                  <Section title="Outcome">
-                    <p className="text-[rgb(var(--muted))]">
-                      {project.outcome}
-                    </p>
-                  </Section>
-
-                  {project.links?.length ? (
-                    <div className="mt-6 flex flex-wrap gap-3">
-                      {project.links.map((link) => (
-                        <a
-                          key={link.href}
-                          href={link.href}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="inline-flex rounded-full border border-[rgb(var(--border))] bg-[rgb(var(--panel))]/70 px-3 py-1 text-sm text-[rgb(var(--text))] shadow-sm transition hover:-translate-y-0.5 hover:border-[rgb(var(--accent))]"
-                        >
-                          {link.label}
-                        </a>
-                      ))}
                     </div>
-                  ) : null}
-                </div>
-              ) : null}
-            </article>
-          );
-        })}
-      </div>
+                  </div>
+
+                  <p className="mt-2 text-sm leading-relaxed text-[rgb(var(--muted))]">
+                    {project.description}
+                  </p>
+
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    {project.tech.slice(0, 6).map((tech) => (
+                      <Tag key={tech}>{tech}</Tag>
+                    ))}
+                  </div>
+                </button>
+
+                {isOpen ? (
+                  <div className="mt-6 border-t border-[rgb(var(--border))] pt-6">
+                    <Section title="Problem">
+                      <p className="text-[rgb(var(--muted))]">
+                        {project.problem}
+                      </p>
+                    </Section>
+
+                    <Section title="Approach">
+                      <p className="text-[rgb(var(--muted))]">
+                        {project.approach}
+                      </p>
+                    </Section>
+
+                    <Section title="Outcome">
+                      <p className="text-[rgb(var(--muted))]">
+                        {project.outcome}
+                      </p>
+                    </Section>
+
+                    {project.links?.length ? (
+                      <div className="mt-6 flex flex-wrap gap-3">
+                        {project.links.map((link) => (
+                          <a
+                            key={link.href}
+                            href={link.href}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="inline-flex rounded-full border border-[rgb(var(--border))] bg-[rgb(var(--panel))]/70 px-3 py-1 text-sm text-[rgb(var(--text))] shadow-sm transition hover:-translate-y-0.5 hover:border-[rgb(var(--accent))]"
+                          >
+                            {link.label}
+                          </a>
+                        ))}
+                      </div>
+                    ) : null}
+                  </div>
+                ) : null}
+              </article>
+            );
+          })}
+        </div>
+      )}
     </div>
   );
 }
