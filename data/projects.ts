@@ -8,6 +8,7 @@ export type Project = {
   links?: { label: string; href: string }[];
   year?: string;
   featured?: boolean;
+  categories: string[];
 };
 
 export const projects: Project[] = [
@@ -24,6 +25,7 @@ export const projects: Project[] = [
       "Obtained a proficiently performing model able to produce semantically meaningful topics.",
     year: "2026",
     featured: false,
+    categories: ["NLP", "Topic Modeling", "Parliamentary Data"],
   },
   {
     title: "Fine-tuning T5 on SCAN",
@@ -41,6 +43,7 @@ export const projects: Project[] = [
     ],
     year: "2025",
     featured: true,
+    categories: ["NLP", "Transformers", "Compositional Generalization"],
   },
   {
     title: "Multi-author Writing Style Analysis",
@@ -58,6 +61,7 @@ export const projects: Project[] = [
     ],
     year: "2025",
     featured: true,
+    categories: ["NLP", "Authorship Analysis", "BERT"],
   },
   {
     title: "Subtitle generation pipeline (faster-whisper)",
@@ -72,6 +76,7 @@ export const projects: Project[] = [
       "Produced consistent subtitle files with a workflow suitable for repeated use.",
     year: "2024",
     featured: false,
+    categories: ["Audio Processing", "Whisper", "Tooling"],
   },
   {
     title: "Bachelor Thesis: Anaphora resolution and reanalysis during L2 processing: A replication study using the visual world paradigm.",
@@ -93,6 +98,7 @@ export const projects: Project[] = [
       "Produced a research thesis connecting syntactic ambiguity, cross-linguistic influence, and L2 interpretation strategies. Awarded a mention of excellence in linguistics.",
     year: "2023",
     featured: false,
+    categories: ["Linguistics", "Psycholinguistics", "Second Language Acquisition"],
   },
   {
     title: "Master Thesis: Ambiguous attachment through the Visual World Paradigm: An experimental study of Danish learners of Spanish",
@@ -114,5 +120,6 @@ export const projects: Project[] = [
       "Produced a cross-linguistic experimental study combining psycholinguistic theory, eye-tracking methodology, and fixation-based analysis of sentence interpretation.",
     year: "2026",
     featured: true,
+    categories: ["Linguistics", "Psycholinguistics", "Second Language Acquisition", "Eye-tracking"],
   },
 ];
