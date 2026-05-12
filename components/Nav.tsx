@@ -11,10 +11,10 @@ const nav = [
   { href: "/cv", label: "CV" },
 ];
 
-type ThemeMode = "auto" | "light" | "dark";
+type ThemeMode = "light" | "dark";
 
 function getThemeMode(): ThemeMode {
-  return ((window as any).__themeMode as ThemeMode | undefined) ?? "auto";
+  return ((window as any).__themeMode as ThemeMode | undefined) ?? "light";
 }
 
 function setThemeMode(mode: ThemeMode) {
@@ -38,15 +38,12 @@ function ThemeButton({
     >
       {mode === "light" && <Sun size={18} />}
       {mode === "dark" && <Moon size={18} />}
-      {mode === "auto" && (
-        <span className="text-[8px] font-semibold tracking-widest">AUTO</span>
-      )}
     </button>
   );
 }
 
 export default function Nav() {
-  const [mode, setMode] = useState<ThemeMode>("auto");
+  const [mode, setMode] = useState<ThemeMode>("light");
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
@@ -54,13 +51,12 @@ export default function Nav() {
   }, []);
 
   function cycleTheme() {
-    const current = getThemeMode();
-    const next: ThemeMode =
-      current === "light" ? "dark" : current === "dark" ? "auto" : "light";
+  const current = getThemeMode();
+  const next: ThemeMode = current === "light" ? "dark" : "light";
 
-    setThemeMode(next);
-    setMode(next);
-  }
+  setThemeMode(next);
+  setMode(next);
+}
 
   function closeMenu() {
     setIsOpen(false);
