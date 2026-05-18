@@ -94,6 +94,12 @@ export const projects: Project[] = [
       "Sentence Processing",
       "Eye-tracking",
     ],
+    links: [
+    {
+      label: "Download thesis",
+      href: "/theses/ba-thesis-anaphora-resolution.pdf",
+    },
+    ],
     outcome:
       "Produced a research thesis connecting syntactic ambiguity, cross-linguistic influence, and L2 interpretation strategies. Awarded a mention of excellence in linguistics.",
     year: "2023",
@@ -115,6 +121,12 @@ export const projects: Project[] = [
       "Experimental Design",
       "Data Analysis",
       "Anaphora Resolution",
+    ],
+    links: [
+    {
+      label: "Download thesis",
+      href: "/theses/ma-thesis-eye-tracking-anaphora-resolution.pdf",
+    },
     ],
     outcome:
       "Produced a cross-linguistic experimental study combining psycholinguistic theory, eye-tracking methodology, and fixation-based analysis of sentence interpretation.",

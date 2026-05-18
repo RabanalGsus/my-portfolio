@@ -104,7 +104,11 @@ export default function Home() {
                 title={p.title}
                 description={p.description}
                 tech={p.tech}
-                href={p.links?.find((l) => l.label === "GitHub")?.href}
+                year={p.year}
+                problem={p.problem}
+                approach={p.approach}
+                outcome={p.outcome}
+                links={p.links}
               />
             ))}
           </div>

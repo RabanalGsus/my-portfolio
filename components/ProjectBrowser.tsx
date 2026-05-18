@@ -82,21 +82,21 @@ export default function ProjectBrowser({ projects }: { projects: Project[] }) {
                 <button
                   type="button"
                   onClick={() => setOpenProject(isOpen ? null : project.title)}
-                  className="w-full text-left"
+                  className="w-full cursor-pointer text-left"
                 >
-                  <div className="flex flex-wrap items-baseline justify-between gap-2">
-                    <h2 className="text-lg font-semibold text-[rgb(var(--text))]">
+                  <div className="grid gap-3 sm:grid-cols-[1fr_auto] sm:items-start">
+                    <h2 className="min-w-0 text-lg font-semibold leading-snug text-[rgb(var(--text))]">
                       {project.title}
                     </h2>
 
-                    <div className="flex items-center gap-3">
+                    <div className="flex shrink-0 items-center gap-3 sm:justify-end sm:pt-0.5">
                       {project.year ? (
-                        <span className="text-sm text-[rgb(var(--muted))]">
+                        <span className="rounded-full border border-[rgb(var(--border))] bg-[rgb(var(--bg))]/50 px-2.5 py-1 text-xs font-medium text-[rgb(var(--muted))]">
                           {project.year}
                         </span>
                       ) : null}
 
-                      <span className="text-sm text-[rgb(var(--muted))]">
+                      <span className="flex h-6 w-6 items-center justify-center rounded-full border border-[rgb(var(--border))] bg-[rgb(var(--bg))]/50 text-xs font-medium text-[rgb(var(--muted))]">
                         {isOpen ? "−" : "+"}
                       </span>
                     </div>
