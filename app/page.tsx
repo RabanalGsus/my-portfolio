@@ -2,6 +2,7 @@ import Section from "@/components/Section";
 import ProjectCard from "@/components/ProjectCard";
 import { projects } from "@/data/projects";
 import Container from "@/components/Container";
+import Image from "next/image";
 
 function PrimaryLink({
   href,
@@ -47,36 +48,51 @@ export default function Home() {
       <Container>
         <header>
           <div className="rounded-3xl border border-[rgb(var(--border))] bg-[rgb(var(--panel))] p-8 shadow-sm sm:p-10">
-            <h1 className="text-4xl font-bold tracking-tight text-[rgb(var(--text))] sm:text-5xl">
-              Jesús Rabanal Álvarez
-            </h1>
+            <div className="grid gap-8 md:grid-cols-[1fr_180px] md:items-start">
+              <div>
+                <h1 className="text-4xl font-bold tracking-tight text-[rgb(var(--text))] sm:text-5xl">
+                  Jesús Rabanal Álvarez
+                </h1>
 
-            <p className="mt-3 text-[rgb(var(--muted))]">
-              NLP · Linguistics &amp; Attention · Researcher
-            </p>
+                <p className="mt-3 text-[rgb(var(--muted))]">
+                  NLP · Linguistics &amp; Attention · Researcher
+                </p>
 
-            <p className="mt-6 max-w-2xl leading-relaxed text-[rgb(var(--muted))]">
-              I work at the intersection of linguistics, natural language
-              processing, and software development. My interests include neural
-              language models, natural cognitive processes, and practical ML
-              systems for language data.
-            </p>
+                <p className="mt-6 max-w-2xl leading-relaxed text-[rgb(var(--muted))]">
+                  I work at the intersection of linguistics, natural language
+                  processing, and software development. My interests include
+                  neural language models, natural cognitive processes, and
+                  practical ML systems for language data.
+                </p>
 
-            <div className="mt-8 flex flex-col items-center gap-4 sm:items-start">
-              <PrimaryLink href="/cv.pdf">Download CV</PrimaryLink>
+                <div className="mt-8 flex flex-col items-center gap-4 sm:items-start">
+                  <PrimaryLink href="/cv.pdf">Download CV</PrimaryLink>
 
-              <div className="flex flex-wrap justify-center gap-3 sm:justify-start">
-                <SecondaryLink href="https://github.com/RabanalGsus">
-                  GitHub
-                </SecondaryLink>
+                  <div className="flex flex-wrap justify-center gap-3 sm:justify-start">
+                    <SecondaryLink href="https://github.com/RabanalGsus">
+                      GitHub
+                    </SecondaryLink>
 
-                <SecondaryLink href="https://www.linkedin.com/in/jesus-rabanal-alvarez/">
-                  LinkedIn
-                </SecondaryLink>
+                    <SecondaryLink href="https://www.linkedin.com/in/jesus-rabanal-alvarez/">
+                      LinkedIn
+                    </SecondaryLink>
 
-                <SecondaryLink href="mailto:jesusrabanal@hotmail.com">
-                  Email
-                </SecondaryLink>
+                    <SecondaryLink href="mailto:jesusrabanal@hotmail.com">
+                      Email
+                    </SecondaryLink>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mx-auto md:mx-0 md:justify-self-end">
+                <Image
+                  src="/images/profile.jpg"
+                  alt="Portrait of Jesús Rabanal Álvarez"
+                  width={180}
+                  height={180}
+                  priority
+                  className="aspect-square rounded-[2rem] border border-[rgb(var(--border))] object-cover shadow-md"
+                />
               </div>
             </div>
           </div>
