@@ -47,54 +47,56 @@ export default function Home() {
     <main>
       <Container>
         <header>
-          <div className="rounded-3xl border border-[rgb(var(--border))] bg-[rgb(var(--panel))] p-8 shadow-sm sm:p-10">
-            <div className="grid gap-8 md:grid-cols-[1fr_180px] md:items-start">
-              <div>
-                <h1 className="text-4xl font-bold tracking-tight text-[rgb(var(--text))] sm:text-5xl">
-                  Jesús Rabanal Álvarez
-                </h1>
+          
+              <div className="rounded-3xl border border-[rgb(var(--border))] bg-[rgb(var(--panel))] p-8 shadow-sm sm:p-10">
+                <div className="flex flex-col gap-8 sm:flex-row sm:items-start">
+                  <div className="shrink-0">
+                    <Image
+                      src="/images/profile.jpg"
+                      alt="Portrait of Jesús Rabanal Álvarez"
+                      width={180}
+                      height={180}
+                      priority
+                      className="aspect-square rounded-[2rem] border border-[rgb(var(--border))] object-cover object-center shadow-md"
+                    />
+                  </div>
 
-                <p className="mt-3 text-[rgb(var(--muted))]">
-                  NLP · Linguistics &amp; Attention · Researcher
-                </p>
+                  <div className="min-w-0">
+                    <h1 className="text-4xl font-bold tracking-tight text-[rgb(var(--text))] sm:text-5xl">
+                      Jesús Rabanal Álvarez
+                    </h1>
 
-                <p className="mt-6 max-w-2xl leading-relaxed text-[rgb(var(--muted))]">
-                  I work at the intersection of linguistics, natural language
-                  processing, and software development. My interests include
-                  neural language models, natural cognitive processes, and
-                  practical ML systems for language data.
-                </p>
+                    <p className="mt-3 text-[rgb(var(--muted))]">
+                      NLP · Linguistics &amp; Attention · Researcher
+                    </p>
 
-                <div className="mt-8 flex flex-col items-center gap-4 sm:items-start">
-                  <PrimaryLink href="/cv.pdf">Download CV</PrimaryLink>
+                    <p className="mt-6 max-w-2xl leading-relaxed text-[rgb(var(--muted))]">
+                      I work at the intersection of linguistics, natural language
+                      processing, and software development. My interests include neural
+                      language models, natural cognitive processes, and practical ML
+                      systems for language data.
+                    </p>
 
-                  <div className="flex flex-wrap justify-center gap-3 sm:justify-start">
-                    <SecondaryLink href="https://github.com/RabanalGsus">
-                      GitHub
-                    </SecondaryLink>
+                    <div className="mt-8 flex flex-col items-start gap-4">
+                      <PrimaryLink href="/cv.pdf">Download CV</PrimaryLink>
 
-                    <SecondaryLink href="https://www.linkedin.com/in/jesus-rabanal-alvarez/">
-                      LinkedIn
-                    </SecondaryLink>
+                      <div className="flex flex-wrap gap-3">
+                        <SecondaryLink href="https://github.com/RabanalGsus">
+                          GitHub
+                        </SecondaryLink>
 
-                    <SecondaryLink href="mailto:jesusrabanal@hotmail.com">
-                      Email
-                    </SecondaryLink>
+                        <SecondaryLink href="https://www.linkedin.com/in/jesus-rabanal-alvarez/">
+                          LinkedIn
+                        </SecondaryLink>
+
+                        <SecondaryLink href="mailto:jesusrabanal@hotmail.com">
+                          Email
+                        </SecondaryLink>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-
-              <div className="mx-auto md:mx-0 md:justify-self-end">
-                <Image
-                  src="/images/profile.jpg"
-                  alt="Portrait of Jesús Rabanal Álvarez"
-                  width={180}
-                  height={180}
-                  priority
-                  className="aspect-square rounded-[2rem] border border-[rgb(var(--border))] object-cover shadow-md"
-                />
-              </div>
-            </div>
+            
           </div>
         </header>
 
