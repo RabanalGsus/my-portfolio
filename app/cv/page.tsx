@@ -1,27 +1,38 @@
 import Section from "@/components/Section";
 import Container from "@/components/Container";
+
 export default function CVPage() {
   return (
     <main>
-
       <Container>
         <header>
-          <h1 className="text-3xl font-bold tracking-tight">CV</h1>
-          <p className="mt-3 text-zinc-400">
-            Summary view + downloadable PDF.
+          <p className="text-xs font-semibold tracking-widest text-[rgb(var(--muted))]">
+            CV
+          </p>
+
+          <h1 className="mt-3 text-3xl font-semibold tracking-tight text-[rgb(var(--text))] sm:text-4xl">
+            Curriculum vitae
+          </h1>
+
+          <p className="mt-4 max-w-2xl leading-relaxed text-[rgb(var(--muted))]">
+            Summary view and downloadable PDF.
           </p>
         </header>
 
         <Section title="Download">
-          <p className="text-zinc-400">
-            <a className="underline text-zinc-200" href="/cv.pdf">
+          <div className="mt-4">
+            <a
+              href="/cv.pdf"
+              className="inline-flex items-center justify-center rounded-full border border-[rgb(var(--accent))] bg-[rgb(var(--accent))]/30 px-5 py-2 text-sm font-semibold text-[rgb(var(--text))] shadow-sm transition hover:-translate-y-0.5 hover:bg-[rgb(var(--accent))]/45 hover:shadow-md"
+            >
               Download CV (PDF)
+              <span className="ml-2">↓</span>
             </a>
-          </p>
+          </div>
         </Section>
 
         <Section title="Overview">
-          <ul className="list-disc pl-5 space-y-2 text-zinc-400">
+          <ul className="list-disc space-y-2 pl-5 text-[rgb(var(--muted))]">
             <li>NLP / linguistics + technology focus</li>
             <li>Experience with Transformers (BERT, T5) and evaluation</li>
             <li>Python, PyTorch, Linux, Git</li>
