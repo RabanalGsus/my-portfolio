@@ -141,9 +141,10 @@ export default function ProjectBrowser({ projects }: { projects: Project[] }) {
                             href={link.href}
                             target="_blank"
                             rel="noreferrer"
-                            className="inline-flex rounded-full border border-[rgb(var(--border))] bg-[rgb(var(--panel))]/70 px-3 py-1 text-sm text-[rgb(var(--text))] shadow-sm transition hover:-translate-y-0.5 hover:border-[rgb(var(--accent))]"
-                          >
+                            className="inline-flex items-center justify-center rounded-full border border-[rgb(var(--border))] bg-[rgb(var(--bg))]/50 px-3 py-1 text-sm font-medium text-[rgb(var(--text))] shadow-sm transition hover:-translate-y-0.5 hover:border-[rgb(var(--accent))]"
+                            >
                             {link.label}
+                            <span className="ml-1 text-[rgb(var(--muted))]">↗</span>
                           </a>
                         ))}
                       </div>

@@ -25,7 +25,7 @@ export const projects: Project[] = [
       "Obtained a proficiently performing model able to produce semantically meaningful topics.",
     year: "2026",
     featured: false,
-    categories: ["NLP", "Topic Modeling", "Parliamentary Data"],
+    categories: ["NLP", "Topic Modeling", "Parliamentary Data", "Research", "Python", "PyTorch", "ML"]
   },
   {
     title: "Fine-tuning T5 on SCAN",
@@ -43,7 +43,7 @@ export const projects: Project[] = [
     ],
     year: "2025",
     featured: true,
-    categories: ["NLP", "Transformers", "Compositional Generalization"],
+    categories: ["NLP", "Transformers", "Compositional Generalization", "PyTorch", "ML", "Sequence Learning"],
   },
   {
     title: "Multi-author Writing Style Analysis",
@@ -61,7 +61,7 @@ export const projects: Project[] = [
     ],
     year: "2025",
     featured: true,
-    categories: ["NLP", "Authorship Analysis", "BERT"],
+    categories: ["NLP", "Authorship Analysis", "BERT", "Python", "ML", "Data Analysis", "Research"],
   },
   {
     title: "Subtitle generation pipeline (faster-whisper)",
@@ -76,7 +76,7 @@ export const projects: Project[] = [
       "Produced consistent subtitle files with a workflow suitable for repeated use.",
     year: "2024",
     featured: false,
-    categories: ["Audio Processing", "Whisper", "Tooling"],
+    categories: ["Audio Processing", "Whisper", "Tooling", "Python", "ML", "Audio"],
   },
   {
     title: "Bachelor Thesis: Anaphora resolution and reanalysis during L2 processing: A replication study using the visual world paradigm.",
@@ -104,7 +104,7 @@ export const projects: Project[] = [
       "Produced a research thesis connecting syntactic ambiguity, cross-linguistic influence, and L2 interpretation strategies. Awarded a mention of excellence in linguistics.",
     year: "2023",
     featured: false,
-    categories: ["Linguistics", "Psycholinguistics", "Second Language Acquisition"],
+    categories: ["Linguistics", "Psycholinguistics", "Second Language Acquisition", "Eye-tracking", "Research", "Data Analysis"],
   },
   {
     title: "Master Thesis: Ambiguous attachment through the Visual World Paradigm: An experimental study of Danish learners of Spanish",
@@ -132,6 +132,6 @@ export const projects: Project[] = [
       "Produced a cross-linguistic experimental study combining psycholinguistic theory, eye-tracking methodology, and fixation-based analysis of sentence interpretation.",
     year: "2026",
     featured: true,
-    categories: ["Linguistics", "Psycholinguistics", "Second Language Acquisition", "Eye-tracking"],
+    categories: ["Linguistics", "Psycholinguistics", "Second Language Acquisition", "Eye-tracking", "Research", "Data Analysis"],
   },
 ];
