@@ -3,6 +3,7 @@ import ProjectCard from "@/components/ProjectCard";
 import { projects } from "@/data/projects";
 import Container from "@/components/Container";
 import Image from "next/image";
+import AnaphoraDemo from "@/components/AnaphoraDemo";
 
 function PrimaryLink({
   href,
@@ -130,6 +131,8 @@ export default function Home() {
               />
             ))}
           </div>
+
+          <AnaphoraDemo />
 
           <div className="mt-5 text-sm">
             <a
