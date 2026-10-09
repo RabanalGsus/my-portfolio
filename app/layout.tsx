@@ -1,3 +1,4 @@
+import Script from "next/script"
 import type { ReactNode } from "react";
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
@@ -20,6 +21,11 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <ThemeProvider>
           <Nav />
           {children}
+	    <Script
+                src="https://stats.jr-tardis.dynv6.net/script.js"
+                data-website-id="08b1a561-4d12-46e6-9e02-8662efef458c"
+                strategy="afterInteractive"
+              />
         </ThemeProvider>
       </body>
     </html>
